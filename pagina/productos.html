@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Colección de Joyería - Jelly Charms</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #ffffff; /* Cambié el fondo a blanco */
+            color: #28537e;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        nav {
+            background-color: #28537e;
+            padding: 12px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(40,83,126,0.3);
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+        nav a:hover,
+        nav a:focus {
+            color: #7dadff;
+            outline: none;
+        }
+        h2 {
+            color: #0e3d6d;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .productos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 30px auto;
+            max-width: 1200px;
+            gap: 20px;
+        }
+        .producto-card {
+            background-color: #fefefe; /* Fondo blanco */
+            border: 1px solid #d3bca0;
+            border-radius: 8px;
+            padding: 15px;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .producto-card:hover {
+            box-shadow: 0 8px 20px rgba(40, 83, 126, 0.15);
+            transform: translateY(-5px);
+        }
+        .producto-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .producto-card h3 {
+            color: #1e3a5f; /* Azul navy */
+            margin-top: 0;
+            font-weight: 700;
+        }
+        .producto-card p {
+            color: #5e493b;
+        }
+        .producto-card .precio {
+            color: #1e3a5f; /* Azul navy */
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .producto-card button {
+            background-color: #1e3a5f; /* Azul navy */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .producto-card button:hover {
+            background-color: #2e5cbc;
+        }
+        .carrito-container {
+            background-color: #fefefe;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px auto;
+            text-align: center;
+            max-width: 600px;
+            box-shadow: 0 4px 15px rgba(40,83,126,0.1);
+        }
+        .carrito-container h2 {
+            margin-top: 0;
+            color: #28537e;
+            font-weight: 700;
+        }
+        #total-carrito {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #28537e;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff; /* blanco */
+            color: #28537e;
+        }
+        footer a {
+            color: #28537e;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        footer a:hover {
+            color: #5b8fee;
+        }
+        @media (max-width: 700px) {
+            nav a {
+                margin: 8px 10px;
+                font-size: 1rem;
+            }
+            .productos-container {
+                flex-direction: column;
+                max-width: 100%;
+                gap: 15px;
+                margin: 20px 0;
+            }
+            .producto-card {
+                width: 90%;
+                margin: 0 auto;
+            }
+            .carrito-container {
+                width: 90%;
+                margin: 30px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="tendencias.html">Tendencias</a>
+        <a href="galeria.html">Galería</a>
+        <a href="formulario.html">Formulario</a>
+        <a href="video.html">Video</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="productos.html">Productos</a>
+    </nav>
+    <h2>Nuestra Colección de Joyería</h2>
+    <div class="productos-container">
+        <div class="producto-card">
+            <img src="../img/anillo4.jpg" alt="Anillo de Manzanita" />
+            <h3>Anillo de Manzanita</h3>
+            <p>Delicado anillo con diseño de manzanita.</p>
+            <p class="precio" data-precio="150.00">Precio: $150.00</p>
+            <button class="agregar-carrito" data-nombre="Anillo de Manzanita" data-precio="150.00">Agregar al carrito</button>
+        </div>
+        <div class="producto-card">
+            <img src="../img/pulsera2.jpg" alt="Pulsera de Plata Moderna" />
+            <h3>Pulsera de Plata Moderna</h3>
+            <p>Elegante pulsera de plata con diseño contemporáneo.</p>
+            <p class="precio" data-precio="120.00">Precio: $120.00</p>
+            <button class="agregar-carrito" data-nombre="Pulsera de Plata Moderna" data-precio="120.00">Agregar al carrito</button>
+        </div>
+        <div class="producto-card">
+            <img src="../img/collar3.jpg" alt="Collar de Lunas" />
+            <h3>Collar de Lunas</h3>
+            <p>Sofisticado collar con dijes de lunas.</p>
+            <p class="precio" data-precio="200.00">Precio: $200.00</p>
+            <button class="agregar-carrito" data-nombre="Collar de Lunas" data-precio="200.00">Agregar al carrito</button>
+        </div>
+        <div class="producto-card">
+            <img src="../img/reloj1.jpg" alt="Reloj de Perlas" />
+            <h3>Reloj de Perlas</h3>
+            <p>Elegante reloj con detalles de perlas.</p>
+            <p class="precio" data-precio="250.00">Precio: $250.00</p>
+            <button class="agregar-carrito" data-nombre="Reloj de Perlas" data-precio="250.00">Agregar al carrito</button>
+        </div>
+        <div class="producto-card">
+            <img src="../img/arete6.jpg" alt="Aretes de Flor" />
+            <h3>Aretes de Flor</h3>
+            <p>Delicados aretes con diseño de flor.</p>
+            <p class="precio" data-precio="80.00">Precio: $80.00</p>
+            <button class="agregar-carrito" data-nombre="Aretes de Flor" data-precio="80.00">Agregar al carrito</button>
+        </div>
+        <div class="producto-card">
+            <img src="../img/cereza.jpg" alt="Llavero de Cerezas" />
+            <h3>Llavero de Cerezas</h3>
+            <p>Encantador llavero de cerezas para tu bolso.</p>
+            <p class="precio" data-precio="50.00">Precio: $50.00</p>
+            <button class="agregar-carrito" data-nombre="Llavero de Cerezas" data-precio="50.00">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <div class="carrito-container">
+        <h2>Carrito de Compras</h2>
+        <p>Total: $<span id="total-carrito">0.00</span></p>
+        <button id="comprar-carrito" style="background-color: #5cb85c; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Comprar</button>
+    </div>
+
+    <script>
+        let totalCarrito = 0;
+        const botonesAgregar = document.querySelectorAll('.agregar-carrito');
+        const totalCarritoSpan = document.getElementById('total-carrito');
+        const botonComprar = document.getElementById('comprar-carrito');
+
+        botonesAgregar.forEach(boton => {
+            boton.addEventListener('click', function () {
+                const nombreProducto = this.dataset.nombre;
+                const precioProducto = parseFloat(this.dataset.precio);
+
+                totalCarrito += precioProducto;
+                totalCarritoSpan.textContent = totalCarrito.toFixed(2);
+
+                alert(`"${nombreProducto}" ha sido agregado al carrito. Total: $${totalCarrito.toFixed(2)}`);
+            });
+        });
+
+        botonComprar.addEventListener('click', function () {
+            if (totalCarrito > 0) {
+                alert(`¡Gracias por tu compra! El total es de $${totalCarrito.toFixed(2)}.`);
+                totalCarrito = 0;
+                totalCarritoSpan.textContent = '0.00';
+            } else {
+                alert('Tu carrito está vacío. Agrega algunos productos antes de comprar.');
+            }
+        });
+    </script>
+
+    <footer>
+        <p>
+            <a href="index.html" style="color: #4682B4; text-decoration: none;">Volver a Inicio</a>
+        </p>
+    </footer>
+</body>
+</html>

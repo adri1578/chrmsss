@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Formulario de Pedido - Jelly Charms</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #284e75;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        nav {
+            background-color: #28537e;
+            padding: 14px 20px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(40,83,126,0.3);
+        }
+        nav a {
+            color: #cbd6ea;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+        nav a:hover,
+        nav a:focus {
+            color: #a3b9e9;
+            outline: none;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #4682B4;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .tagline {
+            color: #5F9EA0;
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #4682B4;
+            border-bottom: 2px solid #B0E0E6;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #4682B4;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #B0E0E6;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: #F8F8FF;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #4682B4;
+            box-shadow: 0 0 8px rgba(70, 130, 180, 0.3);
+        }
+        .btn-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex: 1;
+        }
+        .btn-submit {
+            background-color: #4682B4;
+            color: white;
+        }
+        .btn-submit:hover {
+            background-color: #3A6B8F;
+        }
+        .btn-reset {
+            background-color: #B0E0E6;
+            color: #2F4F4F;
+        }
+        .btn-reset:hover {
+            background-color: #9BC4D2;
+        }
+        .checkbox-group {
+            margin-top: 15px;
+        }
+        .checkbox-item {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-item input {
+            width: auto;
+            margin-right: 10px;
+        }
+        .required:after {
+            content: " *";
+            color: #FF6B6B;
+        }
+        input[type="color"] {
+            height: 50px;
+            width: 100px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav role="navigation" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="tendencias.html">Tendencias</a>
+        <a href="galeria.html">Galería</a>
+        <a href="formulario.html">Formulario</a>
+        <a href="video.html">Video</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="productos.html">Productos</a>
+    </nav>
+    <div class="container">
+        <h1>Jelly Charms</h1>
+        <p class="tagline">Joyería y bisutería a la moda para cada ocasión</p>
+
+        <form method="post" action="procesar_pedido.php"> <h2>Información Personal</h2>
+            <div class="form-group">
+                <label class="required">Nombre completo</label>
+                <input type="text" name="nombre_completo" required placeholder="Ej: Ana Martínez"> </div>
+
+            <div class="form-group">
+                <label class="required">Correo electrónico</label>
+                <input type="email" name="correo_electronico" required placeholder="ana@ejemplo.com"> </div>
+
+            <div class="form-group">
+                <label class="required">Teléfono</label>
+                <input type="tel" name="telefono" required placeholder="(123) 456-7890">
+            </div>
+
+            <h2>Detalles del Pedido</h2>
+            <div class="form-group">
+                <label class="required">Tipo de producto</label>
+                <select name="tipo_producto" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="anillos">Anillos</option>
+                    <option value="collares">Collares</option>
+                    <option value="pulseras">Pulseras</option>
+                    <option value="aretes">Aretes</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="required">Material</label>
+                <select name="material" required>
+                    <option value="">Selecciona un material</option>
+                    <option value="plata">Plata 925</option>
+                    <option value="oro">Oro 14k</option>
+                    <option value="acero">Acero quirúrgico</option>
+                    <option value="otros">Otros materiales</option>
+                </select>
+            </div>
+
+            <h2>Entrega</h2>
+            <div class="form-group">
+                <label class="required">Dirección de envío</label>
+                <textarea name="direccion_envio" required rows="3" placeholder="Calle, número, ciudad, código postal"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Fecha deseada de entrega</label>
+                <input type="date" name="fecha_entrega">
+            </div>
+
+            <div class="form-group">
+                <label>Instrucciones especiales</label>
+                <textarea name="instrucciones_especiales" rows="2" placeholder="Alguna indicación adicional para la entrega"></textarea> </div>
+
+            <div class="form-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="minimalista" name="estilo[]" value="Minimalista"> <label for="minimalista">Minimalista</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="moderno" name="estilo[]" value="Moderno"> <label for="moderno">Moderno</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="vintage" name="estilo[]" value="Vintage"> <label for="vintage">Vintage</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="extravagante" name="estilo[]" value="Extravagante"> <label for="extravagante">Extravagante</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="terminos" name="terminos_aceptados" required> <label for="terminos" class="required">Acepto los términos y condiciones</label>
+                </div>
+            </div>
+            
+            <div class="btn-container">
+                <button type="submit" class="btn btn-submit">Enviar Pedido</button>
+                <button type="reset" class="btn btn-reset">Limpiar Formulario</button>
+            </div>
+        </form>
+        <p style="margin-top: 20px; text-align: center;">
+            <a href="index.html" style="color: #4682B4; text-decoration: none;">Volver a Inicio</a>
+        </p>
+    </div>
+</body>
+</html>

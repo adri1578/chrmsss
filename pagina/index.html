@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jelly Charms - Inicio</title>
+  <link rel="stylesheet" href="estilos/style.css" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="https://www.amazingslider.com/slider-engine/amazingslider-1.css" />
+  <script src="https://www.amazingslider.com/slider-engine/jquery.js"></script>
+  <script src="https://www.amazingslider.com/slider-engine/amazingslider.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #f7f9fc;
+      color: #28537E;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #28537E;
+      padding: 14px 20px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(40,83,126,0.3);
+    }
+    nav a {
+      color: #cbd6ea;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 1.15rem;
+      transition: color 0.3s ease;
+      letter-spacing: 0.5px;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: #a3b9e9;
+      outline: none;
+    }
+    header {
+      background-color: #5484AB;
+      color: white;
+      padding: 50px 20px;
+      margin: 20px auto 40px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    header h1 img {
+      height: 60px;
+      border-radius: 12px;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 15px;
+    }
+    .banner {
+      background-color: #28537E;
+      color: white;
+      padding: 15px;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0 auto 30px auto;
+      border-radius: 10px;
+      max-width: 900px;
+    }
+    #amazingslider-wrapper-1 {
+      display: block;
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      border: 5px solid #28537E;
+      border-radius: 10px;
+    }
+    .amazingslider-slides img {
+      border-radius: 10px;
+    }
+    .promociones {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 0 auto 40px auto;
+      max-width: 900px;
+    }
+    .promocion {
+      background-color: white;
+      border: 2px solid #5484AB;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px;
+      flex: 1 1 260px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .promocion:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(40, 83, 126, 0.3);
+    }
+    .promocion img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .promocion h3 {
+      color: #0e3d6d;
+      margin: 15px 0 10px;
+    }
+    .promocion p {
+      color: #405a7f;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    footer {
+      text-align: center;
+      padding: 20px 10px;
+      border-top: 1px solid #ddd;
+      background: #f7f9fc;
+    }
+    footer a {
+      color: #28537e;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer a:hover {
+      color: #6b8dd6;
+    }
+    @media (max-width: 700px) {
+      nav a {
+        margin: 8px 10px;
+        font-size: 1rem;
+      }
+      header h1 {
+        flex-direction: column;
+        font-size: 2.2rem;
+      }
+      header h1 img {
+        height: 80px;
+      }
+      .promociones {
+        flex-direction: column;
+        gap: 20px;
+        max-width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav role="navigation" aria-label="Navegación principal">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="tendencias.html">Tendencias</a>
+    <a href="galeria.html">Galería</a>
+    <a href="formulario.html">Formulario</a>
+    <a href="video.html">Video</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="productos.html">Productos</a>
+  </nav>
+
+  <header>
+    <h1>
+      <img src="../img/logojelly.jpg" alt="Logo Jelly Charms" />
+      Jelly Charms
+    </h1>
+    <p>Tu mejor opción en joyería y bisutería a la moda</p>
+  </header>
+
+  <div class="banner" role="banner" aria-label="Promoción especial">
+    ¡Aprovecha nuestras ofertas especiales! Descuentos hasta 30% en colección exclusiva.
+  </div>
+
+  <div id="amazingslider-wrapper-1">
+    <div id="amazingslider-1">
+      <ul class="amazingslider-slides" style="display: none;">
+        <li><img src="../img/collar2.jpg" alt="Colección de Collares" data-description="Collares elegantes para cada ocasión" /></li>
+        <li><img src="../img/pulsera3.jpg" alt="Pulseras de Moda" data-description="Complementa tu estilo con nuestras pulseras" /></li>
+        <li><img src="../img/anillo2.jpg" alt="Anillos Exclusivos" data-description="Anillos que hacen statement" /></li>
+        <li><img src="../img/arete3.jpg" alt="Aretes Trendy" data-description="Destaca con nuestros diseños" /></li>
+        <li><img src="../img/reloj1.jpg" alt="Relojes Elegantes" data-description="Precisión y estilo en tu muñeca" /></li>
+      </ul>
+      <ul class="amazingslider-thumbnails" style="display: none;">
+        <li><img src="../img/collar2.jpg" alt="Collar" /></li>
+        <li><img src="../img/pulsera3.jpg" alt="Pulsera" /></li>
+        <li><img src="../img/anillo2.jpg" alt="Anillo" /></li>
+        <li><img src="../img/arete3.jpg" alt="Arete" /></li>
+        <li><img src="../img/reloj1.jpg" alt="Reloj" /></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="promociones">
+    <div class="promocion">
+      <img src="../img/pulsera3.jpg" alt="Pulsera de Moda" />
+      <h3>Pulsera de Moda</h3>
+      <p>Complementa tu estilo con nuestras pulseras elegantes.</p>
+    </div>
+    <div class="promocion">
+      <img src="../img/anillo2.jpg" alt="Anillo Exclusivo" />
+      <h3>Anillo Exclusivo</h3>
+      <p>Anillos que hacen statement para cualquier ocasión.</p>
+    </div>
+    <div class="promocion aretes-trendy">
+      <img src="../img/arete3.jpg" alt="Aretes Trendy" />
+      <h3>Aretes Trendy</h3>
+      <p>Destaca con nuestros diseños únicos y modernos.</p>
+    </div>
+  </div>
+
+  <footer>
+    <a href="index.html" aria-label="Volver a Inicio">Volver a Inicio</a>
+  </footer>
+
+</body>
+</html>
+
